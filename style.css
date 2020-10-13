@@ -1,0 +1,31 @@
+#shape-container {
+    position: relative;
+    contain: paint;
+    height: 600px;
+    width: 600px;
+    background-color: gray;
+}
+
+.shape{
+    position: absolute;
+}
+
+
+#shape-info {
+    font-size:1.5em;
+    height: 600px;
+    width: 250px;
+    background-color: pink;
+}
+
+#container {
+ display: flex;
+}
+
+.circle {
+    border-radius: 50%
+}
+
+/* .triangle {
+
+} */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shape up or shape out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="shape-input">
+        <div>
+            <h3>Rectangle</h3>
+            <lable for="rec-width">Width: </lable>
+            <input type="text" name="rec-width" id="rec-width">
+            <lable for="rec-height">Height:</lable>
+            <input type="text" name="rec-height" id="rec-height">
+            <input id="recBtn" type="button" value="create">
+        </div>
+
+        <div>
+            <h3>Square</h3>
+            <lable for="square-length">Side Lenght: </lable>
+            <input type="text" name="square-lenght" id="square-lenght">
+            <input id="squareBtn" type="button" value="create">
+        </div>
+
+        <div>
+            <h3>Circle</h3>
+            <lable for="circle-length">Radius: </lable>
+            <input type="text" name="circle-redius" id="circle-lenght">
+            <input id="circleBtn" type="button" value="create">
+        </div>
+
+        <div>
+            <h3>Triangle</h3>
+            <lable for="triangle-height">Height: </lable>
+            <input type="text" name="triangle-height" id="triangle-height">
+            <input id="triangleBtn" type="button" value="create">
+        </div>
+
+        <div id="container">
+            <div id="shape-container"></div>
+            <div id="shape-info">
+            <div>shape Name:</div>
+            <div>Width:</div>
+            <div>Height:</div>
+            <div>Radius:</div>
+            <div>Area: </div>
+            <div>Perimeter:</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
