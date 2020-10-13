@@ -10,21 +10,20 @@ class Shape {
         this.shape = document.createElement("div");
         this.shape.classList.add("shape");
         this.shape.addEventListener("click", () => this.describe());
-        this.shape.addEventListener("dbclick", () => shapeContainer.removeChild(this.shape));
+        this.shape.addEventListener("dblclick", () => shapeContainer.removeChild(this.shape));
         shapeContainer.appendChild(this.shape);
         this.shape.style.top = `${Math.floor(Math.random() * 600)}px`;
         this.shape.style.left = `${Math.floor(Math.random() * 600)}px`;
     }
-}
 
 describe() {
-    document.getElementById("shape-name-info").innerText = `ShapeName: ${this.shape.shapeName}`;
+    document.getElementById("shape-name-info").innerText = `Shape Name: ${this.shape.shapeName}`;
     document.getElementById("shape-width-info").innerText = `Width: ${this.shape.width}`;
     document.getElementById("shape-height-info").innerText = `Height: ${this.shape.height}`;
     document.getElementById("shape-radius-info").innerText = `Radius: ${this.shape.radius}`;
-    document.getElementById("shape-area-info").innerText = `Area: ${this.shape.shape.area}`;
+    document.getElementById("shape-area-info").innerText = `Area: ${this.shape.area}`;
     document.getElementById("shape-perimeter-info").innerText = `Perimeter: ${this.shape.perimeter}`;
-    
+  }
 }
 
 class Rectangle extends Shape {
@@ -48,19 +47,30 @@ class Square extends Shape {
         this.shape.style.backgroundColor = "red";
         this.shape.style.top = `${Math.floor(Math.random() * 600)}px`;
         this.shape.style.left = `${Math.floor(Math.random() * 600)}px`;
-        this.addToDOM();
-    }
+        }
 }
 
 class Circle extends Shape {
     constructor(radius) {
+        super();
         this.radius = radius;
+        this.shape.shapeName = "Circle";
         this.shape.classList.add("circle");
         this.shape.style.height = `${2 * this.radius}px`;
         this.shape.style.width = `${2 * this.radius}px`;
         this.shape.style.backgroundColor = "purple";
+        this.doMath();
+    }
+
+    doMath() {
+        this.shape.height = `${this.radius}`;
+        this.shape.width = `${this.radius}`;
+        this.shape.radius = this.radius;
+        this.shape.area = Math.PI() * (this.radius ** 2);
+        this.shape.perimeter = 2 * Math.PI() * this.radius;
     }
 }
+
 
 class Triangle extends Shape {
     constructor(height) {
